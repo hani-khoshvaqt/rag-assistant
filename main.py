@@ -13,6 +13,7 @@ def load_chunks():
     return chunks
 
 
-chunks = load_chunks()
-print(len(chunks))
-print(chunks[0])
+if __name__ == "__main__":
+    chunks = load_chunks()
+    print(len(chunks))
+    print(chunks[0])

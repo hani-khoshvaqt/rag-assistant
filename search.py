@@ -7,7 +7,7 @@ texts = [c["text"] for c in chunks]
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 chunk_embs = model.encode(texts)
 
-question = "ارسال به تهران چند روز طول می کشه؟"
+question = "How many days does shipping to Tehran take?"
 q_emb = model.encode(question)
 
 scores = util.cos_sim(q_emb, chunk_embs)[0].tolist()
