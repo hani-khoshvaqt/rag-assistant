@@ -9,7 +9,7 @@ A customer-support assistant for a small clothing store. It answers questions in
 3. **Retrieval:** the question is embedded too, and the 3 most similar chunks are found with cosine similarty.
 4. **Answering:** an LLM (Claude) answers only from those chunks and names the source file. If the best similarity is below a threshold, the assistant replies "I don't know".
 
-# Evaluation
+## Evaluation
 `evaluate.py` comares the best similarity score for questions that have an answer in the documents and questions that do not.
 
 - Lowest score for answerable questions: 0.57
