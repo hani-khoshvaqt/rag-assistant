@@ -18,8 +18,8 @@ A customer-support assistant for a small clothing store. It answers questions in
 
 ## Limitations
 
-- The gap between the two groups is narrow (0.06), so a fixed threshold is fragile. The next step is to let the LLM decide whether the retrieved chunks contain the answer.
-- The dataset is small (3 files, 14 test questions).
+- A fixed threshold is fragile. On an extended test set, the highest score of an unanswerable question (0.61, a topically related one) is above the lowest score of an answerable one (0.57), so no single, threshold separates them. The next step is to let the LLM decide whether the retrieved chunks contain the answer.
+- The dataset is small (3 files, 18 test question).
 - A mock mode (`USE_MOCK = True`) returns the best chunk directly, without calling an LLM.
 
 ## Run it
