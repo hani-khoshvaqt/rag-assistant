@@ -30,3 +30,23 @@ python answer.py
 ```
 
 To use Claude, put `ANTHROPIC_API_KEY` in a `.env` file and set `USE_MOCK = False` in `answer.py`.
+
+## API
+
+Start the server:
+
+```
+uvicorn api:app --reload
+```
+
+
+Then open `http://127.0.0.1:8000/docs` and try `POST / ask`.
+
+Example response:
+
+```json
+{
+    "answer": "...",
+    "sources": [{"source": "shipping.txt", "score": 0.879}]
+}
+```
